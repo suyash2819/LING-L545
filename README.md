@@ -32,7 +32,8 @@ TOKENIZATION REPORT:
 
   execution of maxmath.py - 
 
-  We need to pass the dictionary file as an argument and take input of the sentence from stdin
+  We need to pass the dictionary file as an argument and take input of the sentence from stdin, the 1st line is the stdin and the 2nd line is the result that we received from the 
+  maxmatch algorithm.
   
   ![image](https://github.com/suyash2819/LING-L545/assets/28905722/98fd5b76-e298-4ef6-be38-a81267b8e9c7)
 
