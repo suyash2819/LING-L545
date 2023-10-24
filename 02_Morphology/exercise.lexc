@@ -1,0 +1,40 @@
+Multichar_Symbols
+
+%>           ! Morpheme boundary
+%<n%>        ! Noun
+%<gen%>      ! Genitive case
+%<poss%>     ! Possessive
+
+LEXICON Root
+Nouns ;
+
+LEXICON N
+%<n%>: CASE ;
+%<n%>: POSS ;
+
+LEXICON CASE
+%<gen%>:%>s # ;    ! Genitive case suffix
+%<poss%>:%>'s # ;  ! Possessive suffix
+
+LEXICON Nouns
+kirk:kirk N ;           ! "church"
+hoose:hoose N ;         ! "house"
+car:car N ;             ! "car"
+bairn:bairn N ;         ! "child"
+schuil:schuil N ;       ! "school"
+licht:licht N ;         ! "light"
+heid:heid N ;           ! "head"
+haun:haun N ;           ! "hand"
+feet:feet N ;           ! "feet"
+heidie:heidie N ;       ! "teacher"
+heidie%<gen%>:heidie%>s ;  ! Genitive case for "teacher"
+beast:beast N ;         ! "beast"
+heid%<poss%>:heid%>'s ;    ! Possessive for "head"
+baa:baa N ;             ! "sheep"
+dug:dug N ;             ! "dog"
+brither:brither N ;     ! "brother"
+sister:sister N ;       ! "sister"
+gless:gless N ;         ! "glass"
+door:door N ;           ! "door"
+waater:waater N ;       ! "water"
+
