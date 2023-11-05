@@ -80,6 +80,7 @@ Buryat:
 
 Afrikaans:
 
+![image](https://github.com/suyash2819/LING-L545/assets/28905722/8e041f41-8f52-4d70-b56f-0dc40fece0ec)
 
 
 Ancient Hebrew:
