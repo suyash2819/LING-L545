@@ -23,7 +23,7 @@ Inspecting 10 trees for errors:
 
    Here S is tagged as proper noun but it os not a proper noun, it is just a noun.
 
-  6	s	S	PROPN	_	Number=Sing	5	nmod	_	_
+   6	s	S	PROPN	_	Number=Sing	5	nmod	_	_
 
 5. what meals are available on dl 468 which al arrives in san francisco at 950 am
 
@@ -33,8 +33,8 @@ Inspecting 10 trees for errors:
 
    here San Francisco is one word although its broken down into two but the tags are correct as proper noun.
 
-  6	san	San	PROPN	_	Number=Sing	4	conj	_	_
-  7	francisco	Francisco	PROPN	_	Number=Sing	6	flat	_	_
+     6	san	San	PROPN	_	Number=Sing	4	conj	_	_
+     7	francisco	Francisco	PROPN	_	Number=Sing	6	flat	_	_
 
 7.  what is the fare going from baltimore to atlanta one way on november seventh
 
@@ -46,9 +46,9 @@ Inspecting 10 trees for errors:
 
 9. please find a flight from kansas city to newark
 
-  Here Please is tagged as interjection but it seems to be Adverb.
+     Here Please is tagged as interjection but it seems to be Adverb.
 
-  1	please	please	INTJ	_	_	2	discourse	_	_
+     1	please	please	INTJ	_	_	2	discourse	_	_
 
 10. only show continental flights
 
