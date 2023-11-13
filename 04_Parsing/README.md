@@ -21,7 +21,7 @@ Inspecting 10 trees for errors:
 
 4.  what does the meal code s stand for
 
-   Here S is tagged as proper noun but it os not a proper noun, it is just a noun.
+      Here S is tagged as proper noun but it os not a proper noun, it is just a noun.
 
    6	s	S	PROPN	_	Number=Sing	5	nmod	_	_
 
