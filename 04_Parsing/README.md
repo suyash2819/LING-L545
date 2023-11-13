@@ -38,11 +38,11 @@ Inspecting 10 trees for errors:
 
 7.  what is the fare going from baltimore to atlanta one way on november seventh
 
-   Everything seems fine in this sentence.
+      Everything seems fine in this sentence.
 
 8. flight from milwaukee to denver
 
-   Everything seems fine in this sentence.
+      Everything seems fine in this sentence.
 
 9. please find a flight from kansas city to newark
 
@@ -52,4 +52,4 @@ Inspecting 10 trees for errors:
 
 10. only show continental flights
 
-  Everything Seems fine in this sentence.
+     Everything Seems fine in this sentence.
