@@ -20,4 +20,10 @@ Udpipe:
 ![udpipe_performance](https://github.com/suyash2819/LING-L545/assets/28905722/606db43d-13cd-4336-b989-3bb10cfa4e49)
 
 since we are majorly looking at the UPOs (universal part of speech) the comparison looks like:
-According to the above evaluation, it seems nltk_tagger was most effective in tagging correctly with UPOS of 100 and perceptron tagger with 90.36 and udpipe with 94.69. 
+According to the above evaluation, it seems nltk_tagger was most effective in tagging correctly with UPOS accuracy of 100%, this result indicates perfect performance in POS tagging, with every tag matching the gold standard.
+
+The Perceptron Tagger shows high accuracy but not perfect with accuracy of 90.36%
+
+UDPipe shows a strong performance, with a high accuracy with 94.69% accuracy.
+
+ UDPipe, likely benefiting from more sophisticated algorithms and perhaps more comprehensive training data, outperforms the Perceptron Tagger by a small margin.
