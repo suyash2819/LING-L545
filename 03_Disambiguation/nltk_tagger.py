@@ -36,21 +36,26 @@ test_data = read_conllu(test_file)
 
 tagged_test_data = [unigram_tagger.tag(sent) for sent in test_data]
 
-def format_to_conllu(sentence, original_sentence):
-    conllu_lines = []
-    for i, (word, pos_tag) in enumerate(sentence, start=1):
-        original_fields = original_sentence[i-1].split('\t')
+def format_to_conllu(tagged_sentence, original_sentence):
+    conllu_formatted = []
+    for line in original_sentence:
+        # Preserve comment lines as they are
+        if line.startswith('#'):
+            conllu_formatted.append(line)
+            continue
 
-        # Ensure pos_tag is a string; use '_' if it's None
-        pos_tag = pos_tag if pos_tag is not None else '_'
+        # Process token lines
+        parts = line.split('\t')
+        if len(parts) == 10:
+            word, original_pos = parts[1], parts[3]
+            # Find the corresponding tagged POS for this word
+            tagged_pos = next((pos for w, pos in tagged_sentence if w == word), original_pos)
 
-        # Replace only the POS tag in the original fields
-        original_fields[3] = pos_tag 
-
-        conllu_line = '\t'.join(original_fields)
-        conllu_lines.append(conllu_line)
+            # Replace the POS tag with the tagged one
+            parts[3] = tagged_pos
+            conllu_formatted.append('\t'.join(parts))
     
-    return '\n'.join(conllu_lines)
+    return '\n'.join(conllu_formatted)
 
 
 def read_original_conllu(file_path):
