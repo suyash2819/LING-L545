@@ -9,7 +9,7 @@ Below are the screenshots of the evaluation from the evaluation script:
 
 nltk tagger:
 
-![nltk_performance](https://github.com/suyash2819/LING-L545/assets/28905722/bcc4e7e4-ef96-4b00-890b-ad5864b7ac49)
+![image](https://github.com/suyash2819/LING-L545/assets/28905722/271cfef5-1793-4e51-b6ba-8ffac6d740a2)
 
 Perceptron tagger:
 
