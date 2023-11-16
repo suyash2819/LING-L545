@@ -18,3 +18,6 @@ Perceptron tagger:
 Udpipe:
 
 ![udpipe_performance](https://github.com/suyash2819/LING-L545/assets/28905722/606db43d-13cd-4336-b989-3bb10cfa4e49)
+
+
+According to the above evaluation, it seems nltk_tagger was most effective in tagging correctly with UPOS of 100 
