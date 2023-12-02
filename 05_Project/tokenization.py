@@ -11,6 +11,7 @@ def tokenize_hindi(text):
 			word+=char
 		else:
 			if word:
+				#regex to remove unnecessary data except hindi
 				hindi_script_pattern = re.compile(r'[\u0900-\u097F]+')
 				cleaned_word = ''.join(hindi_script_pattern.findall(word))
 				tokens.append(cleaned_word)
@@ -31,17 +32,11 @@ outputFile='tokenize_clean.txt'
 chunk_size = 10000
 
 
-#hindi_script_pattern = re.compile(r'[\u0900-\u097F]+')
-#cleaned_chunk = ''.join(hindi_script_pattern.findall(hindi_text))
-#print(cleaned_chunk) 
-
 with open(inputFile, 'r', encoding='utf-8') as Infile:
 	tokenized_text=[]
 	i=8000
 	while i>0:
 		chunk = Infile.read(chunk_size)
-		#hindi_script_pattern = re.compile(r'[\u0900-\u097F]+')
-		#cleaned_chunk = ''.join(hindi_script_pattern.findall(chunk))
 		if not chunk:
 			break
 		tokens=tokenize_hindi(chunk)
