@@ -28,7 +28,6 @@ incorrect_words={"खाइया","शरारति", "किय", "गाय
 
 correct_words={'', 'अपना', 'कितनी', 'वह', 'प्यारी', '।', 'उसे', 'पढ़ी', 'तुम्हारा', 'स्मार्ट्त', 'ज्यादा', 'उसने', 'मजा', 'बताया', 'पूरा', 'अच्छा', 'गायकक', 'अनीता', 'बाद', 'किया', 'ढूंढ', 'आया', 'है', 'कहाथा', 'नाम', 'ने', 'सुनने', 'हुई', 'नया', 'कैसा', 'हँसती', 'खाना', 'बच्चा', 'दिखती', 'जाना', 'उसका', 'फोन', 'ली', 'शरारति', 'क्या', 'मैंने', 'काम', 'तुम्हारी', 'बहन', 'कहानी', 'बहुत', 'बच्च्या', 'जाकर', 'था', 'किसने', 'तुमने', 'थामैंने', 'अपनी', 'खोई', 'दिनों', 'खाइया', 'मे', 'किय', 'किताब', 'बनाय', 'तुम्हें', 'वहाँ'}
 
-
 correct_suggestions={"खाया", "शरारती", "किया", "गायक", "में", "फ़ोन", "स्मार्ट", "बनाया","कहा", "बच्चा"}
 
 total_incorrect_words=len(incorrect_words)
@@ -102,22 +101,31 @@ if __name__ == '__main__':
 			for key in lookup:
 				value=editDistance(word,key)
 				if(value == 0):
-					#if value is 0 that means it is correct and if that is in the correct_words list
-					if(key in correct_words):
-						correct_words_predicted.add(key)
+					correct_words_predicted.add(key)
 					correct=True
 					break
 				elif(value == 1 or value==2):
 					suggestions.append(key)
 			if(correct==False):
-				#if word is in the incorrect words list
-				if(word in incorrect_words):
-					incorrect_words_predicted.add(word)
+				incorrect_words_predicted.add(word)
 				final_suggestions.extend(suggestions)
 			correct=False
 			suggestions=[]
 
-	print("incorrect word prediction accuracy: ",len(incorrect_words_predicted)/total_incorrect_words)
+	incorrect_words_predicted_count=0
+	correct_words_predicted_count=0
+	for w in incorrect_words_predicted:
+		#if the word is in the reference incorrect words list
+		if(w in incorrect_words):
+			incorrect_words_predicted_count+=1
+
+	for w in correct_words_predicted:
+		#if the word is in the reference correct words list
+		if(w in correct_words):
+			correct_words_predicted_count+=1
+
+
+	print("model accuracy", (incorrect_words_predicted_count+correct_words_predicted_count)/total_words)
 	for suggestion in final_suggestions:
 		#if suggestion is in the correct_suggestions list
 		if(suggestion in correct_suggestions):
