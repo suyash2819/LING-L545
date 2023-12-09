@@ -10,10 +10,10 @@ There are two files:
 1. spellChecker.py which will check for spellings. To use this kindly install the below packages:
    
 sys  <br>
-json
-ast
-re
-zip and unzip
+json  <br>
+ast  <br>
+re  <br>
+zip and unzip  <br>
 
 After installing, kindly unzip tokenize_clean.zip file which is needed by the code for lookup.
 After this, the code can be executed by python3 spellChecker.py.
@@ -22,11 +22,11 @@ This code takes lot of time to execute because it is running for many sentences.
 
 2. realWord.py which will check for realWord errors. To use this kindly install the below packages:
    
-sys
-json
-ast
-re
-from collections import defaultdict
+sys  <br>
+json  <br>
+ast  <br>
+re  <br>
+from collections import defaultdict  <br>
 
 After installing, kindly unzip bi-grams.zip file which is needed by the code for lookup.
 After this, the code can be executed by python3 realWord.py.
