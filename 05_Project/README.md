@@ -9,8 +9,8 @@ There are two files:
 
 1. spellChecker.py which will check for spellings. To use this kindly install the below packages:
    
-sys
-json
+sys \\n
+json \\n
 ast
 re
 zip and unzip
