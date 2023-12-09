@@ -9,7 +9,7 @@ There are two files:
 
 1. spellChecker.py which will check for spellings. To use this kindly install the below packages:
    
-sys \\n
+sys <br>
 json \\n
 ast
 re
